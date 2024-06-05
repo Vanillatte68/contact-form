@@ -65,6 +65,11 @@ h1 {
   display: flex;
 }
 
+.inputradio:has(input[type="radio"]:checked) {
+  border: solid 1px var(--primary-color);
+  background-color: var(--green-light);
+}
+
 label {
   cursor: pointer;
 }
@@ -200,9 +205,13 @@ footer a {
 }
 
 @media screen and (max-width: 576px) {
+  body {
+    padding: 1.5rem 1rem 0;
+    box-sizing: content-box;
+  }
   .contact_wrap {
     box-sizing: border-box;
-    margin-bottom: 0;
+    margin: auto;
   }
   .box2 {
     flex-direction: column;
